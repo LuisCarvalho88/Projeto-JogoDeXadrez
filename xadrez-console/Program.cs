@@ -9,7 +9,7 @@ namespace xadrez_console
         static void Main(string[] args)
         {
 
-            Tabuleiro tab = new Tabuleiro(8, 8);
+            Tabuleiro tab = new Tabuleiro(8, 8); // instaciar um tabuleiro e colocar pecas nele =>
 
             tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
             tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));

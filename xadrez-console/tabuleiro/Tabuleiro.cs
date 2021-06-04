@@ -19,7 +19,7 @@
             return pecas[linha, coluna];
         }
 
-        public void colocarPeca(Peca p, Posicao pos)
+        public void colocarPeca(Peca p, Posicao pos) // associacao peca tem um tabuleiro
         {
             pecas[pos.linha, pos.coluna] = p; // jogando a peca p la na matriz na posinha linha e coluna
             p.posicao = pos; //agor a apeca p passa a ser pos

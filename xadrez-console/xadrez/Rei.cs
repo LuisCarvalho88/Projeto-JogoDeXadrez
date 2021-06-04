@@ -2,7 +2,7 @@
 
 namespace xadrez
 {
-    class Rei : Peca
+    class Rei : Peca // rei é um herança de peca
     {
         public Rei(Tabuleiro tab, Cor cor) : base(tab, cor)
         {
