@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using tabuleiro;
+using xadrez;
 
 namespace xadrez_console
 {
@@ -23,7 +24,7 @@ namespace xadrez_console
                     else
                     {
                         Tela.imprimirPeca(tab.peca(i, j));
-                        Console.Write("- ");
+                        Console.Write(" ");
                         //Console.Write(tab.peca(i, j) + " ");
                     }
                 }
@@ -32,7 +33,7 @@ namespace xadrez_console
             Console.WriteLine("  a b c d e f g h");
         }
 
-        public static void imprimirPeca(Peca peca)
+        public static void imprimirPeca(Peca peca) // elementos estáticos metodo imprimir
         {
             if (peca.cor == Cor.Branca)
             {
@@ -45,6 +46,14 @@ namespace xadrez_console
                 Console.Write(peca);
                 Console.ForegroundColor = aux;
             }
+        }
+
+        public static PosicaoXadrez lerPosicaoXadrez() // metodo vai ler do teclado o que o usuario digitar
+        {
+            string s = Console.ReadLine();
+            char coluna = s[0];
+            int linha = int.Parse(s[1] + "");
+            return new PosicaoXadrez(coluna, linha);
         }
     }
 }

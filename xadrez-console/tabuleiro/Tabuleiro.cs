@@ -40,6 +40,18 @@
             p.posicao = pos; //agor a apeca p passa a ser pos
         }
 
+        public Peca retirarPeca(Posicao pos)
+        {
+            if (peca(pos) == null)
+            {
+                return null;
+            }
+            Peca aux = peca(pos);
+            aux.posicao = null;
+            pecas[pos.linha, pos.coluna] = null;
+            return aux;
+        }
+
         //metodo que testa se a posição é valida
         public bool posicaoValida(Posicao pos)
         {
