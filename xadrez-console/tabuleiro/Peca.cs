@@ -39,7 +39,12 @@
             return false;
         }
 
-        public bool podeMoverPara(Posicao pos)
+        /// <summary>
+        /// metodo para validar a posicao de destino
+        /// </summary>
+        /// <param name="pos"></param>
+        /// <returns></returns>
+        public bool movimentoPossivel(Posicao pos)
         {
             return MovimentosPossiveis()[pos.linha, pos.coluna];
         }
