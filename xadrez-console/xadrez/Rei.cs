@@ -18,7 +18,7 @@ namespace xadrez
             return p == null || p.cor != cor;
         }
 
-        public override bool[,] MovimentosPossiveis() //movimentos possiveis do rei Henrança e sobreposição
+        public override bool[,] movimentosPossiveis() //movimentos possiveis do rei Henrança e sobreposição
         {
             bool[,] mat = new bool[tab.linhas, tab.colunas]; //estrutura de dados matriz
             Posicao pos = new Posicao(0, 0);

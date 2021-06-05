@@ -4,7 +4,7 @@
     {
         public Posicao posicao { get; set; }
         public Cor cor { get; protected set; }
-        public int qtdMovimentos { get; protected set; }
+        public int qteMovimentos { get; protected set; }
         public Tabuleiro tab { get; protected set; }
 
         public Peca(Tabuleiro tab, Cor cor)
@@ -12,20 +12,20 @@
             this.posicao = null;
             this.cor = cor;
             this.tab = tab;
-            this.qtdMovimentos = 0;
+            this.qteMovimentos = 0;
         }
-        public void incrementarQtdMovimentos()
+        public void incrementarqteMovimentos()
         {
-            qtdMovimentos++;
+            qteMovimentos++;
         }
-        public void decrementarQtdMovimentos()
+        public void decrementarqteMovimentos()
         {
-            qtdMovimentos--;
+            qteMovimentos--;
         }
 
         public bool existeMovimentoPossiveis() //metodo existe movimentos possiveis
         {
-            bool[,] mat = MovimentosPossiveis();
+            bool[,] mat = movimentosPossiveis();
             for (int i = 0; i < tab.linhas; i++)
             {
                 for (int j = 0; j < tab.colunas; j++)
@@ -46,10 +46,10 @@
         /// <returns></returns>
         public bool movimentoPossivel(Posicao pos)
         {
-            return MovimentosPossiveis()[pos.linha, pos.coluna];
+            return movimentosPossiveis()[pos.linha, pos.coluna];
         }
 
-        public abstract bool[,] MovimentosPossiveis();
+        public abstract bool[,] movimentosPossiveis();
 
     }
 }
