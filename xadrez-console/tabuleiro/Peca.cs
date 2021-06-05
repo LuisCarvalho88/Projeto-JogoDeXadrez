@@ -14,6 +14,14 @@
             this.tab = tab;
             this.qtdMovimentos = 0;
         }
+        public void incrementarQtdMovimentos()
+        {
+            qtdMovimentos++;
+        }
+        public void decrementarQtdMovimentos()
+        {
+            qtdMovimentos--;
+        }
 
         public bool existeMovimentoPossiveis() //metodo existe movimentos possiveis
         {
@@ -38,9 +46,5 @@
 
         public abstract bool[,] MovimentosPossiveis();
 
-        //public void incrementarQtdMovimentos()
-        //{
-        //    qtdMovimentos++;
-        //}
     }
 }
