@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using tabuleiro;
-
-namespace tabuleiro
+﻿namespace tabuleiro
 {
-    class Peca
+    abstract class Peca
     {
         public Posicao posicao { get; set; }
         public Cor cor { get; protected set; }
@@ -22,9 +15,11 @@ namespace tabuleiro
             this.qtdMovimentos = 0;
         }
 
-        public void incrementarQtdMovimentos()
-        {
-            qtdMovimentos++;
-        }
+        public abstract bool[,] MovimentosPossiveis();
+
+        //public void incrementarQtdMovimentos()
+        //{
+        //    qtdMovimentos++;
+        //}
     }
 }
